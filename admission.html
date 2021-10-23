@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admission</title>
+        <link rel="stylesheet" href="font awesome/css/all.min.css">
+        <style>
+                * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                }
+
+                body {
+                        background-color: rgb(210, 210, 248);
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: rgba(255, 255, 255, 0.952);
+                }
+
+                #box1 {
+                        height: 400px;
+                        width: 370px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        background: url(images/lights.jpg) no-repeat center;
+
+                }
+
+
+
+                h3 {
+                        margin-left: 30px;
+                        margin-top: 1px;
+                }
+
+                #p1 {
+                        margin-left: 30px;
+                        font-size: 13px;
+                        margin-top: 10px;
+                }
+
+                .a {
+                        color: rgb(129, 2, 129);
+                }
+
+                #formname {
+                        margin-top: 25px;
+                        margin-left: 50px;
+                }
+
+                /* #firstname{float: left;}             */
+
+
+
+                #label1 {
+                        font-size: 14px;
+                }
+
+                #input1 {
+                        width: 240px;
+                        height: 45px;
+                        margin-top: 5px;
+                        background: transparent;
+                        color: white;
+                        font-size: bolder;
+                        border: white 3px solid;
+                        border-radius: 4px 0px 0px 4px;
+                }
+
+                #input1::placeholder {
+                        padding-left: 15px;
+                }
+
+                #label2 {
+                        font-size: 14px;
+                }
+
+                #input2 {
+                        width: 240px;
+                        height: 45px;
+                        margin-top: 5px;
+                        color: white;
+                        font-size: bolder;
+                        background: transparent;
+                        border: white 3px solid;
+                        border-radius: 0px 4px 4px 0px;
+                }
+
+                #input2::placeholder {
+                        padding-left: 15px;
+                }
+
+                #email {
+                        margin-top: 10px;
+                }
+
+                #password {
+                        margin-top: 10px;
+                }
+
+                #label3 {
+                        font-size: 14px;
+                }
+
+                #input3 {
+                        width: 240px;
+                        height: 45px;
+                        margin-top: 5px;
+                        color: white;
+                        font-size: bolder;
+                        background: transparent;
+                        border: white 3px solid;
+                        border-radius: 4px 4px 4px 4px;
+                }
+
+                #input3::placeholder {
+                        padding-left: 15px;
+                }
+
+                #input4 {
+                        width: 240px;
+                        height: 45px;
+                        margin-top: 5px;
+                        color: white;
+                        font-size: bolder;
+                        background: transparent;
+                        border: white 3px solid;
+                        border-radius: 4px 4px 4px 4px;
+                }
+
+                #input4::placeholder {
+                        padding-left: 15px;
+                }
+
+                #p2 {
+                        margin-left: 30px;
+                        margin-top: 10px;
+                        font-size: 14px;
+                }
+
+                #button1 {
+                        width: 100px;
+                        height: 45px;
+                        background-color: rgb(206, 6, 206);
+                        margin-left: 30px;
+                        border: 1px solid rgb(129, 2, 129);
+                        border-radius: 4px 4px 4px 4px;
+                        color: white;
+                        box-shadow: 0px 10px 18px rgb(248, 94, 248);
+                }
+
+
+                #p3 {
+                        text-align: center;
+                        font-size: 13px;
+                        margin-top: 20px;
+                }
+
+                .error {
+                        color: rgb(255, 0, 0);
+                }
+
+                .success {
+                        color: rgb(9, 255, 9);
+                }
+
+                #par,
+                #par1,
+                #par2,
+                #par3,
+                #par4 {
+                        display: flex;
+                        justify-content: center;
+                        margin: 20px;
+                        color: rgba(190, 149, 44, 0.89);
+                        ;
+                }
+        </style>
+</head>
+
+<body id="body">
+        <h2 style="text-align: center;">input your information below to login to the school admission portal</h2>
+        <div id="box1">
+                <form id="forms" action="/store" onsubmit="checkforms();" method="GET">
+
+
+                        <div id="formname">
+                                <div id="firstname">
+                                        <label id="label1" for="First Name"><b>First Name</b><br></label>
+                                        <input id="input1" type="text" value="" name="firstname"
+                                                placeholder="First name">
+                                        <small></small>
+                                </div>
+                                <div id="lastname">
+                                        <label id="label2" for="Last Name"><b>Last Name</b><br></label>
+                                        <input id="input2" type="text" value="" name="Lastname" placeholder="Last name">
+                                        <small></small>
+                                </div>
+                                <div id="email">
+                                        <label id="label3" for="Email"><b>Email</b><br></label>
+                                        <input id="input3" type="email" value="" name="email"
+                                                placeholder="Enter your email address">
+                                        <small></small>
+                                </div>
+                                <div id="password">
+                                        <label id="label4" for="password"><b>password</b><br></label>
+                                        <input id="input4" type="password" value="" name="email"
+                                                placeholder="Enter your password">
+                                        <small></small>
+                                </div> <br>
+
+
+                                <label id="label5" for="password"><b>Show Password</b> <input class="fas fa-eye"
+                                                id="pwdcheck" type="checkbox"></label>
+                        </div>
+
+
+
+                        <div>
+                                <button id="button1" type="submit">Submit</button>
+                        </div>
+
+
+                </form>
+        </div>
+        <div class="wrapper">
+                <h2 id="par"></h2>
+                <h2 id="par1"></h2>
+                <h2 id="par2"></h2>
+                <h2 id="par3"></h2>
+                <h2 id="par4"></h2>
+        </div>
+        <script>
+                //get each element in the form
+                let fname = document.querySelector('#input1')
+                let lname = document.querySelector('#input2')
+                let email = document.querySelector('#input3')
+                let pwd = document.querySelector('#input4')
+                let pwdCheck = document.querySelector('#pwdcheck')
+
+                //get the submit button
+                document.getElementById('button1').onclick = (event) => {
+                        event.preventDefault()
+                        checkinputs()
+                        let primary = checkinputs
+                        if (formm.value !== "") {
+                                document.getElementById("par").innerHTML = "firstname:" + fname.value,
+                                        document.getElementById("par1").innerHTML = "lastname:" + lname.value,
+                                        document.getElementById("par2").innerHTML = "email:" + email.value,
+                                        document.getElementById("par3").innerHTML = "password:" + pwd.target
+                        } else {
+                                document.getElementById("par").innerText = "firstname cannot be empty"
+                                document.getElementById("par1").innerText = "lastname cannot be empty"
+                                document.getElementById("par2").innerText = "email cannot be empty"
+                                document.getElementById("par3").innerText = "password cannot be empty"
+                        }
+                        console.log(formm);
+                }
+                var formm = document.querySelectorAll('input')
+                //  console.log(formm);
+                //function to check inputs
+                function checkinputs() {
+                        //get the values from each
+                        let fnameValue = fname.value.trim();
+                        let lnameValue = lname.value.trim();
+                        let emailValue = email.value.trim();
+                        let pwdValue = pwd.value.trim();
+
+
+                        //validate the entries
+                        // check if fields are empty
+                        let msg = ""
+                        if (fnameValue === "") {
+                                msg = "INVALID"
+
+                                setErrorFor(fname, msg)
+                        } else {
+                                setSuccessFor(fname, "VALID")
+                        }
+                        if (lnameValue === "") {
+                                msg = "INVALID"
+
+                                setErrorFor(lname, msg)
+                        } else {
+                                setSuccessFor(lname, "VALID")
+                        }
+                        //error input box
+                        if (emailValue === "") {
+                                msg = "INVALID"
+
+                                setErrorFor(email, msg)
+                        }
+                        //        else if(!validEmail(emailValue)){
+                        //         // msg = "email is not valid"
+                        //         setErrorFor(email,msg)
+                        //        } 
+                        else {
+                                setSuccessFor(email, "VALID")
+                        }
+                        //password
+                        if (pwdValue === "") {
+                                msg = "INVALID"
+
+                                setErrorFor(pwd, msg)
+                        } else if (pwdValue.length < 8) {
+                                msg = "password cannot be less than 8 characters"
+                                setErrorFor(pwd, msg)
+                        } else {
+                                setSuccessFor(pwd, "VALID")
+                        }
+                }
+
+                //create a function to handle errors
+                function setErrorFor(input, message) {
+                        const parent = input.parentElement;
+                        const small = parent.querySelector('small')
+
+                        small.className = "error"
+                        small.innerText = message;
+
+
+                }
+
+                //create a function to handle success
+                function setSuccessFor(input, message) {
+                        const parent = input.parentElement;
+                        const small = parent.querySelector('small')
+
+                        small.className = "success"
+                        small.innerText = message;
+
+                }
+                //regular expression to validate Email
+                function validEmail(mail) {
+                        const re =
+                                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        return re.test(String(email).toLowerCase());
+                }
+                //check password
+                (function () {
+                        pwdCheck.addEventListener('change', (event) => {
+
+                                var target = event.target || event.srcElement;
+
+                                //do some error checking
+                                try {
+                                        // change the type attribute on the password input
+                                        if (target.checked) {
+                                                pwd.type = 'text'
+                                        } else {
+                                                pwd.type = 'password'
+                                        }
+                                } catch (error) {
+                                        alert(error.message)
+                                }
+                        })
+                }())
+        </script>
+</body>
+
+</html>
